@@ -14,7 +14,7 @@ module Whenever::Test
       end
     end
 
-    def every(*args, &_block)
+    def every(*args, &block)
       @_current_every = args
       yield
     end
