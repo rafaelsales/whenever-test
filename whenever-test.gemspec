@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = '1.0.0'
   spec.authors       = ['Rafael Sales']
   spec.email         = ['rafaelcds@gmail.com']
-  spec.summary       = %q{Test Whenever scheduled jobs}
-  spec.description   = %q{Whenever gem doesn't provide test support, so whenever-test makes that possible}
+  spec.summary       = 'Test Whenever scheduled jobs'
+  spec.description   = "Whenever gem doesn't provide test support, so whenever-test makes that possible"
   spec.homepage      = 'https://github.com/heartbits/whenever-test'
   spec.license       = 'MIT'
 

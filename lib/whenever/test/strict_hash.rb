@@ -1,5 +1,5 @@
 module Whenever::Test
   class StrictHash < Hash
-    alias [] fetch
+    alias_method :[], :fetch
   end
 end
