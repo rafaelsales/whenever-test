@@ -9,7 +9,7 @@ module Whenever::Test
 
     def job_type(job, command)
       @_world.jobs[job] = []
-      define_singleton_method(job) do |task, *args|
+      define_singleton_method(job) do |task, *_args|
         @_world.jobs[job] << StrictHash[task: task, every: @_current_every, command: command]
       end
     end
