@@ -30,10 +30,24 @@ describe Whenever::Test::Schedule do
     end
   end
 
-  it 'makes sure `set` statements are captured ' do
+  it 'makes sure `set` statements are captured from the schedule file ' do
     schedule = Whenever::Test::Schedule.new(file: fixture)
 
     assert_equal 'bundle exec rails runner', schedule.sets[:runner_command]
+  end
+
+  it 'makes sure `set` statements are captured from the setup file ' do
+    schedule = Whenever::Test::Schedule.new(file: fixture)
+
+    assert schedule.sets[:path]
+  end
+
+  it 'makes sure user-specified variables override those in the setup file ' do
+    schedule = Whenever::Test::Schedule.new(file: fixture)
+    assert_equal 'production', schedule.sets[:environment]
+
+    schedule = Whenever::Test::Schedule.new(file: fixture, vars: { environment: 'staging' })
+    assert_equal 'staging', schedule.sets[:environment]
   end
 
   it 'makes sure `env` statements are captured ' do

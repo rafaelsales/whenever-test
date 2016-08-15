@@ -1,10 +1,7 @@
 module Whenever::Test
   class DSLInterpreter
-    def initialize(schedule_world, vars)
+    def initialize(schedule_world)
       @_world = schedule_world
-      vars.each do |name, value|
-        instance_variable_set("@#{name}", value)
-      end
     end
 
     def job_type(job, command)
@@ -20,6 +17,9 @@ module Whenever::Test
     end
 
     def set(name, value)
+      instance_variable_set("@#{name}".to_sym, value)
+      self.class.send(:attr_reader, name.to_sym)
+
       @_world.sets[name] = value
     end
 

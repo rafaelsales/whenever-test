@@ -7,8 +7,9 @@ module Whenever::Test
       self.envs = {}
       self.sets = {}
 
-      dsl = DSLInterpreter.new(self, vars)
+      dsl = DSLInterpreter.new(self)
       setup_whenever(dsl)
+      vars.each { |k,v| dsl.set(k, v) }
       parse(dsl, file)
     end
 
