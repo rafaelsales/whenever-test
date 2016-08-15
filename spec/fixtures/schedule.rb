@@ -1,4 +1,4 @@
-set :output, '/var/log/whenever.log'
+set :output, "#{path}/log/whenever.log"
 set :runner_command, 'bundle exec rails runner'
 job_type :ping, 'ping :task'
 env :PATH, ENV['PATH']
