@@ -96,6 +96,7 @@ This gem implements a class that has the same DSL interface as Whenever gem. It 
 ### Contributors
 
 * Rafael Sales [@rafaelsales](https://github.com/rafaelsales)
+* Mike Stewart [@mike-stewart](https://github.com/mike-stewart)
 
 ### Contributing
 
