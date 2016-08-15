@@ -2,7 +2,6 @@
 
 [![Gem Downloads](http://img.shields.io/gem/dt/whenever-test.svg)](https://rubygems.org/gems/whenever-test)
 [![Build Status](https://snap-ci.com/heartbits/whenever-test/branch/master/build_image)](https://snap-ci.com/heartbits/whenever-test/branch/master)
-[![Code Climate](https://codeclimate.com/github/rafaelsales/whenever-test/badges/gpa.svg)](https://codeclimate.com/github/rafaelsales/whenever-test)
 [![GitHub Issues](https://img.shields.io/github/issues/rafaelsales/whenever-test.svg)](https://github.com/rafaelsales/whenever-test/issues)
 [![GitHub License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/rafaelsales/whenever-test)
 
