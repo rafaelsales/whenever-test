@@ -13,14 +13,13 @@ I've been part of many projects that used [Whenever](https://github.com/javan/wh
 
 Turns out your jobs defined in [Whenever](https://github.com/javan/whenever) schedule might reference rake tasks that don't exist in runtime and not even have correct ruby syntax (in case or runner-type jobs).
 
-This gem adds a support class so you can write specs that asserts against definitions in the `schedule.rb` file. To make sure ruby statements referenced in runner-type jobs actually work, you can `instance_eval` them and write expectations on what should happen, and then you'll be sure cron jobs won't have runtime issues that are detected only in staging or production environments.
+This gem adds a support class so you can write specs that assert against definitions in the `schedule.rb` file. To make sure ruby statements referenced in runner-type jobs actually work, you can `instance_eval` them and write expectations on what should happen, and then you'll be sure cron jobs won't have runtime issues that are detected only in staging or production environments.
 
 NOTE: *This gem is test-framework agnostic, so you can use with RSpec, MiniTest, ...*
 
 ### Installation
 
-Since it's available in [Rubygems](https://rubygems.org/gems/whenever-test), just add the following to Gemfile:
-Add this line to your Gemfile:
+Since it's available in [Rubygems](https://rubygems.org/gems/whenever-test), just add the following to your Gemfile:
 
 ```ruby
 group :test do
