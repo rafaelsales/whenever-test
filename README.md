@@ -43,7 +43,7 @@ if @environment == 'staging'
 end
 ```
 
-You can write a spec such as (Minitest was used in this example):
+You can write a spec such as (RSpec was used in this example):
 
 ```ruby
 # spec/whenever_spec.rb
