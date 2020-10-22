@@ -11,7 +11,7 @@ A gem that adds test support to [Whenever](https://github.com/javan/whenever) ge
 
 I've been part of many projects that used [Whenever](https://github.com/javan/whenever), but testing the `schedule.rb` file was always neglected.
 
-Turns out your jobs defined in [Whenever](https://github.com/javan/whenever) schedule might reference rake tasks that don't exist in runtime and not even have correct ruby syntax (in case or runner-type jobs).
+Turns out your jobs defined in [Whenever](https://github.com/javan/whenever) schedule might reference rake tasks that don't exist in runtime and not even have correct ruby syntax (in case of runner-type jobs).
 
 This gem adds a support class so you can write specs that assert against definitions in the `schedule.rb` file. To make sure ruby statements referenced in runner-type jobs actually work, you can `instance_eval` them and write expectations on what should happen, and then you'll be sure cron jobs won't have runtime issues that are detected only in staging or production environments.
 
